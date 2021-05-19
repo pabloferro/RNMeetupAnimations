@@ -1,28 +1,37 @@
 import {StyleSheet} from 'react-native';
+import {grey02, brandPrimary, grey01} from '../../constants/colors';
 
 const AVATAR_WIDTH = 50;
+const AVATAR_EXPANDED_WIDTH = 80;
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: grey01,
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
   },
   containerExpanded: {
     flexDirection: 'column',
-    paddingVertical: 50,
   },
   avatar: {
     height: AVATAR_WIDTH,
     width: AVATAR_WIDTH,
-    borderRadius: AVATAR_WIDTH / 2,
-    backgroundColor: 'grey',
+    borderRadius: AVATAR_EXPANDED_WIDTH / 2,
+    backgroundColor: grey02,
   },
-  activeCourses: {
-    flexDirection: 'row',
+  avatarExpanded: {
+    height: AVATAR_EXPANDED_WIDTH,
+    width: AVATAR_EXPANDED_WIDTH,
   },
-  activeCoursesExpanded: {
-    flexDirection: 'column',
+  userName: {
+    fontFamily: 'Nunito-SemiBold',
+    fontSize: 18,
+  },
+  spacing: {
+    margin: 5,
+  },
+  signOut: {
+    color: brandPrimary,
   },
 });
